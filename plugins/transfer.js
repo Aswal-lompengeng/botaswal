@@ -14,7 +14,7 @@ let handler = async (m, { conn, args, usedPrefix, owner }) => {
                     try {
                         global.db.data.users[m.sender].money -= count * 1
                         global.db.data.users[who].money += count * 1
-                        conn.reply(m.chat, `Berhasil mentransfer money sebesar ${count}`.trim(), m)
+                        conn.reply(m.chat, `Berhasil Menyisihkan sbagian hartamu sebesar ${count}`.trim(), m)
                     } catch (e) {
                         global.db.data.users[m.sender].money += count * 1
                         m.reply('Gagal Menstransfer')
@@ -25,7 +25,7 @@ let handler = async (m, { conn, args, usedPrefix, owner }) => {
                             }
                         }
                     }
-                } else conn.reply(m.chat, `Uang kamu tidak mencukupi untuk mentransfer Money sebesar ${count}`.trim(), m)
+                } else conn.reply(m.chat, `Harta kamu tidak mencukupi untuk bersedekah kpd dia sebesar ${count}`.trim(), m)
                 break 
              case 'exp':
                 if (global.db.data.users[m.sender].exp >= count * 1) {
