@@ -16,13 +16,13 @@ conn.level = global.db.data.users[m.sender]
 
   let lamaPertarungan = getRandom(8,20)
 
-  m.reply(`*Pet Kamu* (🐱kucing ${global.db.data.users[m.sender].kucing}) menantang 🐈kucingnya *${conn.getName(lawan)}* (🐱kucing ${global.db.data.users[lawan].kucing}) lagi kelahi rebutin bini.\n\nTunggu ${lamaPertarungan} menit lagi dan lihat siapa yg menang🎮.`)
+  m.reply(`*kucing Kamu* (🐱kucing ${global.db.data.users[m.sender].kucing}) menantang 🐈kucingnya si*${conn.getName(lawan)}* (🐱kucing ${global.db.data.users[lawan].kucing}) lagi kelahi rebutin bini.\n\nTunggu ${lamaPertarungan} menit lagi dan lihat siapa yg menang🎮.`)
 
   conn.fightnaga[m.sender] = true
 
   await delay(1000 * 60 * lamaPertarungan)
 
-  let alasanKalah = ['Naikin lagi levelnya😐','Cupu','Kurang hebat','Ampas Petnya','Pet gembel']
+  let alasanKalah = ['Naikin lagi levelnya😐','Cupu','Kurang hebat','Ampas Petnya','kehausan']
   let alasanMenang = ['Hebat','Pro','Ganas Pet','Legenda Pet','Sangat Pro','Rajin Ngasi Makan Pet']
 
   let kesempatan = []
