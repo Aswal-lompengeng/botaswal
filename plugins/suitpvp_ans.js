@@ -16,11 +16,11 @@ handler.before = async function (m) {
       room.asal = m.chat
       clearTimeout(room.waktu)
       //delete room[room.id].waktu
-      m.reply(`Suit telah dikirimkan ke chat
+      m.reply(`Bahan Suit telah dikirimkan ke chat Pribadi!
 @${room.p.split`@`[0]} dan 
 @${room.p2.split`@`[0]}
 
-Silahkan pilih suit di chat masing"
+Silahkan pilih bahan suit di chat masing❗"
 klik wa.me/${conn.user.jid.split`@`[0]}`, m.chat, 
          {
           mentions: [room.p, room.p2]
