@@ -3,7 +3,7 @@ let yts = require('yt-search')
 let fetch = require('node-fetch')
 const { servers, yta, ytv } = require('../lib/y2mate')
 let handler = async (m, { conn, command, usedPrefix, text, isPrems, isOwner }) => {
-  if (!text) throw `What song are you want find?\n*Example:* ${usedPrefix}play alan walker faded`
+  if (!text) throw `Lagu Apa yg Mau kamu Cari?\n*Example:* ${usedPrefix}play alan walker faded`
   let chat = global.db.data.chats[m.chat]
   let results = await yts(text)
   let vid = results.all.find(video => video.seconds < 3600)
@@ -31,7 +31,7 @@ let handler = async (m, { conn, command, usedPrefix, text, isPrems, isOwner }) =
 *${isLimit ? 'Pakai ': ''}Link:* ${await shortlink(dl_link)}
 *Server y2mate:* ${usedServer}
 
-_*Please wait while processing..*_
+_*Tunggu sebentar ya kak,lagi loading ⏳ ..*_
 `.trim(), m)
 let _thumb = {}
 try { if (isVideo) _thumb = { thumbnail: await (await fetch(thumb)).buffer() } }
