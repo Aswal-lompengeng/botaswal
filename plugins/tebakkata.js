@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     conn.tebakkata = conn.tebakkata ? conn.tebakkata : {}
     let id = m.chat
     if (id in conn.tebakkata) {
-        conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', conn.tebakkata[id][0])
+        conn.reply(m.chat, 'Jawab dulu dgn benar soal sebelumnya kak❗', conn.tebakkata[id][0])
         throw false
     }
    let src = await (await fetch('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkata.json')).json()
@@ -22,7 +22,7 @@ Tiketcoin: 1 Tiketcoin
         await conn.reply(m.chat, caption, m),
         json, poin,
         setTimeout(() => {
-            if (conn.tebakkata[id]) conn.reply(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, conn.tebakkata[id][0])
+            if (conn.tebakkata[id]) conn.reply(m.chat, `Waktu habis☹️\nJawabannya adalah *${json.jawaban}*`, conn.tebakkata[id][0])
             delete conn.tebakkata[id]
         }, timeout)
     ]
