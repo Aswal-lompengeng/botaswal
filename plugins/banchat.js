@@ -4,7 +4,7 @@ let handler = async (m, { conn, participants }) => {
     m.reply('Done!')
   // } else m.reply('Ada nomor host disini...')
 }
-handler.help = ['banchat']
+handler.help = ['𝘿𝙤𝙣𝙚✓ 𝘉𝘰𝘵 𝘛𝘥𝘬 𝘈𝘬𝘢𝘯 𝘔𝘦𝘳𝘦𝘴𝘱𝘰𝘯!']
 handler.tags = ['owner']
 handler.command = /^banchat|bnc$/i
 handler.owner = true
