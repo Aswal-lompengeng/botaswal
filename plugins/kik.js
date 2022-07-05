@@ -3,7 +3,7 @@ let fs = require('fs')
  let ownerGroup = m.chat.split`-`[0] + '@s.whatsapp.net'
   aki = m.quoted ? [m.quoted.sender] : m.mentionedJid
   let users = aki.filter(u => !(u == ownerGroup || u.includes(conn.user.jid)))
-  wayy = '_*Gw punya Fitur Kick LHO 😐'
+  wayy = '_𝗠𝗮𝗮𝗳 𝘆𝗮 𝗸𝗮𝗸😔,𝗔𝗸𝘂 𝗰𝘂𝗺𝗮𝗻 𝗺𝗲𝗺𝗮𝘁𝘂𝗵𝗶 𝗽𝗲𝗿𝗶𝗻𝘁𝗮𝗵 𝗔𝗱𝗺𝗶𝗻 𝘂𝗻𝘁𝘂𝗸 𝗺𝗲𝗻𝗴𝘂𝘀𝗶𝗿 𝗺𝘂🙏🏻'
   for (let i of users) {
   wayy += ` @${i.split('@')[0]}`
   }
