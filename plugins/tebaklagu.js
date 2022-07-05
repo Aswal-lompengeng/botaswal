@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 
-let timeout = 180000
+let timeout = 60000
 let poin = 1000
 let handler = async (m, { conn, usedPrefix }) => {
     conn.tebaklagu = conn.tebaklagu ? conn.tebaklagu : {}
@@ -15,7 +15,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let json = src[Math.floor(Math.random() * src.length)]
     // if (!json.status) throw json
     let caption = `
-TEBAK JUDUL LAGU 
+𝐓𝐄𝐁𝐀𝐊 𝐉𝐔𝐃𝐔𝐋 𝐍𝐘𝐀 𝐘 𝐆𝐔𝐘𝐒❗
 Artis : ${json.artis}
 Judul : _____
 Timeout *${(timeout / 1000).toFixed(2)} detik*
@@ -27,7 +27,7 @@ Tiketcoin: 1 Tiketcoin
         await m.reply(caption),
         json, poin,
         setTimeout(() => {
-            if (conn.tebaklagu[id]) conn.reply(m.chat, `Waktu habis!\nJawabannya adalah *${json.judul}*`, conn.tebaklagu[id][0])
+            if (conn.tebaklagu[id]) conn.reply(m.chat, `𝐖𝐀𝐊𝐓𝐔𝐍𝐘𝐀 𝐇𝐀𝐁𝐈𝐒☹️\n𝐘𝐆 𝐁𝐄𝐍𝐀𝐑 𝐀𝐃𝐀𝐋𝐀𝐇➡️ *${json.judul}*`, conn.tebaklagu[id][0])
             delete conn.tebaklagu[id]
         }, timeout)
     ]
