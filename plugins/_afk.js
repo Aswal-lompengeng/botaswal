@@ -17,7 +17,7 @@ Selama ${clockString(new Date - user.afk)}
       if (!afkTime || afkTime < 0) continue
       let reason = user.afkReason || ''
       m.reply(`
-Shuut..🤫Jgn Tag kak!
+Shuut..🤫Jgn Tag kak❗
 Dia sedang AFK ${reason ? 'dengan alasan ' + reason : 'Tdk ada alasan dia afk,mngkin lagi ngambek krna dicuekin ayang☹️'}
 Selama ${clockString(new Date - afkTime)}
 `.trim())
