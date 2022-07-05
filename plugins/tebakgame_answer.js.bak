@@ -5,7 +5,7 @@ handler.before = async function (m) {
   let id = m.chat
   if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !/Ketik.*tega/i.test(m.quoted.text)) return !0
   this.tebakgame = this.tebakgame ? this.tebakgame : {}
-  if (!(id in this.tebakgame)) return m.reply('Soal itu telah berakhir')
+  if (!(id in this.tebakgame)) return m.reply('Soal ny telah dijawab nak🙄')
   if (m.quoted.id == this.tebakgame[id][0].id) {
     let json = JSON.parse(JSON.stringify(this.tebakgame[id][1]))
     // m.reply(JSON.stringify(json, null, '\t'))
@@ -15,8 +15,8 @@ handler.before = async function (m) {
       m.reply(`*Benar!*\n+${this.tebakgame[id][2]} XP\n+1 Tiketcoin`)
       clearTimeout(this.tebakgame[id][3])
       delete this.tebakgame[id]
-    } else if (similarity(m.text.toLowerCase(), json.jawaban.toLowerCase().trim()) >= threshold) m.reply(`*Dikit Lagi!*`)
-    else m.reply(`*Salah!*`)
+    } else if (similarity(m.text.toLowerCase(), json.jawaban.toLowerCase().trim()) >= threshold) m.reply(`𝐀𝐲𝐨 𝐃𝐢𝐤𝐢𝐭 𝐋𝐚𝐠𝐢🙈`)
+    else m.reply(`𝐒𝐀𝐋𝐀𝐇 𝐊𝐀𝐊🚫`)
   }
   return !0
 }
