@@ -37,9 +37,9 @@ let _thumb = {}
 try { if (isVideo) _thumb = { thumbnail: await (await fetch(thumb)).buffer() } }
 catch (e) { }
 if (!isLimit) conn.sendFile(m.chat, dl_link, title + '.mp' + (3 + /2$/.test(command)), `
-*Title:* ${title}
-*Filesize:* ${filesizeF}
-*Source:* ${vid.url}
+*𝐉𝐮𝐝𝐮𝐥:* ${title}
+*𝐔𝐤𝐮𝐫𝐚𝐧 𝐅𝐢𝐥𝐞:* ${filesizeF}
+*𝐒𝐨𝐮𝐫𝐜𝐞:* ${vid.url}
 *Server y2mate:* ${usedServer}
 `.trim(), m, false,  {
   ..._thumb,
