@@ -23,7 +23,7 @@ TiketCoin: ${tiketcoin}
     await conn.sendFile(m.chat, json.img, 'tebakgame.jpg', caption, m, false, { thumbnail: Buffer.alloc(0) }),
     json, poin,
     setTimeout(() => {
-      if (conn.tebakgame[id]) conn.reply(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, conn.tebakgame[id][0])
+      if (conn.tebakgame[id]) conn.reply(m.chat, `𝐘𝐚𝐚𝐡..𝐰𝐚𝐤𝐭𝐮𝐧𝐲𝐚 𝐡𝐚𝐛𝐢𝐬☹️\n𝐘𝐠 𝐛𝐞𝐧𝐚𝐫 𝐀𝐝𝐚𝐥𝐚𝐡 ➡️ *${json.jawaban}*`, conn.tebakgame[id][0])
       delete conn.tebakgame[id]
     }, timeout)
   ]
