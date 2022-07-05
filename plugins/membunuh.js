@@ -7,20 +7,20 @@ let nomors = m.sender
   let who
   if (m.isGroup) who = m.mentionedJid[0]
   else who = m.chat
-  if (!who) throw 'Tag salah satu lah'
+  if (!who) throw 'Tag yg mau di eksekusi❗'
   if (typeof db.data.users[who] == 'undefined') throw 'Pengguna tidak ada didalam data base'
   let __timers = (new Date - global.db.data.users[m.sender].lastbunuhi)
   let _timers = (3600000 - __timers) 
   let timers = clockString(_timers)
   let users = global.db.data.users
   if (new Date - global.db.data.users[m.sender].lastbunuhi > 3600000){
-   if (10 > users[who].health) throw 'Target sudah tidak memiliki health'
-   if (100 > users[who].money) throw 'Target tidak memiliki apapun :('
+   if (10 > users[who].health) throw 'Target sudah tidak Berdaya krna kekurangan Healt'
+   if (100 > users[who].money) throw 'Target tidak memiliki barang berharga❗'
   users[who].health -= healtu * 1
   users[who].money -= dapat * 1
   users[m.sender].money += dapat * 1
   global.db.data.users[m.sender].lastbunuhi = new Date * 1
-  m.reply(`Target berhasil di bunuh dan kamu mengambil money target sebesar\n${dapat} Money\nDarah target berkurang -${healtu} Healt`)
+  m.reply(`Kamu sedang menyelinap masuk kedlm rumah target dan berhasil menusuk nya dri belakang dgn sebuah pisau,Uang target kamu dapatkan sebesar\n${dapat} Money\nDarah target berkurang -${healtu} Healt`)
 }else conn.reply(m.chat, `Anda sudah membunuh orang dan berhasil sembunyi , tunggu ${timers} untuk membunuhnya lagi`, m)
 }
 
