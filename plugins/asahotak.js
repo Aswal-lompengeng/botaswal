@@ -24,7 +24,7 @@ Tiketcoin: ${tiketcoin} TiketCoin
         await conn.reply(m.chat, caption, m),
         json, poin,
         setTimeout(() => {
-            if (conn.asahotak[id]) conn.reply(m.chat, `𝙒𝙖𝙠𝙩𝙪 𝙣𝙮𝙖 𝙃𝙖𝙗𝙞𝙨❗\n𝙅𝙖𝙬𝙖𝙗𝙖𝙣𝙮𝙖 𝘼𝙙𝙖𝙡𝙖𝙝 ➡️ *${json.jawaban}*`, conn.asahotak[id][0])
+            if (conn.asahotak[id]) conn.reply(m.chat, `𝙒𝙖𝙠𝙩𝙪 𝙣𝙮𝙖 𝙃𝙖𝙗𝙞𝙨❗\n𝙅𝙖𝙬𝙖𝙗𝙖𝙣 𝙮𝙜 𝙗𝙚𝙣𝙖𝙧 𝘼𝙙𝙖𝙡𝙖𝙝 ➡️ *${json.jawaban}*`, conn.asahotak[id][0])
             delete conn.asahotak[id]
         }, timeout)
     ]
