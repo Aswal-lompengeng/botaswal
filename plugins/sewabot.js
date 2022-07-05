@@ -29,7 +29,7 @@ jika sudah bayar langsung konfirmasi ke owner dibawah (sertakan screenshot)
   jpegThumbnail: baper },
   businessOwnerJid: `6285828357727@s.whatsapp.net`
   },
-  footerText: 'https://m.youtube.com/channel/UC0rPHvwr0sJtaccF8Mm1Xnj',
+  footerText: '𝐒𝐀𝐋𝐀𝐌 𝐓𝐎𝐋𝐄𝐑𝐀𝐍𝐒𝐈',
   }},{})
   conn.relayMessage(prepare.key.remoteJid,prepare.message,{messageId:prepare.key.id})
   const data = global.owner.filter(([id, isCreator]) => id && isCreator)
