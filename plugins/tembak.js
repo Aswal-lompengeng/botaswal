@@ -39,7 +39,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
         m
       );
     if (user === m.sender)
-      return conn.reply(m.chat, `Tidak bisa berpacaran dengan diri sendiri`, m);
+      return conn.reply(m.chat, `Beliau ini gocak gaming guys🤣..ingat❗Tidak bisa berpacaran dengan diri sendiri🚫`, m);
     //if (user === conn.user.jid)
     //return conn.reply(m.chat, `Tidak bisa berpacaran dengan bot`, m);
 
@@ -91,11 +91,11 @@ let handler = async (m, { conn, text, usedPrefix }) => {
           );
         conn.reply(
           m.chat,
-          `Tau sopan santun dikit kawan!si dia\n@${
+          `Tau sopan santun dikit kawan❗si dia\n@${
             user.split("@")[0]
           } sudah berpacaran dengan @${
             pacar.split("@")[0]
-          }\n\nSilahkan cari pasangan virtual lain aja!\ndenda : ${format(
+          }\n\nSilahkan cari pasangan virtual lain aja👍🏼\ndenda : ${format(
             denda
           )} (10%)*`,
           m,
@@ -109,7 +109,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
         global.db.data.users[m.sender].pasangan = user;
         conn.reply(
           m.chat,
-          `Kamu baru saja mengajak @${
+          `Ciee..Kamu baru saja mengajak @${
             user.split("@")[0]
           } berpacaran\n\nSabar ya kak,tunggu jawaban dia🥰!\nKetik ${usedPrefix}terima @user atau ${usedPrefix}tolak @user`,
           m,
@@ -138,9 +138,9 @@ let handler = async (m, { conn, text, usedPrefix }) => {
       global.db.data.users[m.sender].pasangan = user;
       conn.reply(
         m.chat,
-        `Kamu baru saja mengajak @${
+        `Ciee..Kamu baru saja mengajak @${
           user.split("@")[0]
-        } berpacaran\n\nSilahkan menunggu jawabannya saja ya!\nKetik ${usedPrefix}terima @user atau ${usedPrefix}tolak @user`,
+        } berpacaran\n\nSabar y,Silahkan menunggu jawaban dia🥰\nKetik ${usedPrefix}terima @user atau ${usedPrefix}tolak @user`,
         m,
         {
           contextInfo: {
