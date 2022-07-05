@@ -1,12 +1,12 @@
 let fetch = require('node-fetch')
 
-let timeout = 180000
+let timeout = 60000
 let poin = 500
 let handler = async (m, { conn, usedPrefix }) => {
     conn.tekateki = conn.tekateki ? conn.tekateki : {}
     let id = m.chat
     if (id in conn.tekateki) {
-        conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', conn.tekateki[id][0])
+        conn.reply(m.chat, 'Pertanyaan sebelumnya belum terjawab loh kak🙄', conn.tekateki[id][0])
         throw false
     }
     let src = await (await fetch('https://raw.githubusercontent.com/qisyana/scrape/main/tekateki.json')).json()
