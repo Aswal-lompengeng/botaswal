@@ -8,7 +8,7 @@ let handler = async (m, { teks, conn, isOwner, isAdmin, args }) => {
 if(m.quoted.sender === ownerGroup || m.quoted.sender === conn.user.jid) return;
 let usr = m.quoted.sender;
 let nenen = await conn.groupParticipantsUpdate(m.chat, [usr], "promote"); return;
-if (nenen) m.reply(`sukses promote @${user.split('@')[0]}!`);
+if (nenen) m.reply(`𝐂𝐢𝐞𝐞🙈𝐉𝐚𝐝𝐢 𝐀𝐝𝐦𝐢𝐧🙉 @${user.split('@')[0]}!`);
 }
   if (!m.mentionedJid[0]) throw `tag yang mau dinaikan jabatannya`;
   let users = m.mentionedJid.filter(
