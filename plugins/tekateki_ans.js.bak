@@ -5,18 +5,18 @@ handler.before = async function (m) {
     let id = m.chat
     if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !/Ketik.*tekki/i.test(m.quoted.text)) return !0
     this.tekateki = this.tekateki ? this.tekateki : {}
-    if (!(id in this.tekateki)) return m.reply('Soal itu telah berakhir')
+    if (!(id in this.tekateki)) return m.reply('Soal itu telah terjawab kak😉')
     if (m.quoted.id == this.tekateki[id][0].id) {
         let json = JSON.parse(JSON.stringify(this.tekateki[id][1]))
         // m.reply(JSON.stringify(json, null, '\t'))
         if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
             global.db.data.users[m.sender].exp += this.tekateki[id][2]
             global.db.data.users[m.sender].tiketcoin += 1
-            m.reply(`*Benar!*\n+${this.tekateki[id][2]} XP\n+1 Tiketcoin`)
+            m.reply(`Nice bnget👍\n+${this.tekateki[id][2]} XP\n+1 Tiketcoin`)
             clearTimeout(this.tekateki[id][3])
             delete this.tekateki[id]
-        } else if (similarity(m.text.toLowerCase(), json.jawaban.toLowerCase().trim()) >= threshold) m.reply(`*Dikit Lagi!*`)
-        else m.reply(`*Salah!*`)
+        } else if (similarity(m.text.toLowerCase(), json.jawaban.toLowerCase().trim()) >= threshold) m.reply(`Ayo ngab sdikit lagi🤭`)
+        else m.reply(`Aduh salah kak😣`)
     }
     return !0
 }
